@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  backdrop-filter: blur(12px);
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.emoji {
+  font-size: 64px;
+  margin-bottom: 10px;
+  animation: float 2s infinite ease-in-out;
+}
+
+#temp {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+#desc,
+#location {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: #888;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.6;
+  user-select: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
